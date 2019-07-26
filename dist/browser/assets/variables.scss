@@ -1,0 +1,49 @@
+// Fonts
+$font-default: 'Roboto Regular', sans-serif;
+$font-heading: 'Roboto', sans-serif;
+
+$font-size-default: 13.5px;
+$font-size-header: 20px;
+
+// Padding
+$padding-section-default: 60px;
+$padding-section-medium: 80px;
+$padding-section-large: 50px;
+
+// Colors
+$default: #3b4779;
+$dark: #3b4779;
+$light-grey: #b6b7bb;
+$grey: #363636;
+$dark-grey: #5d5e60;
+$black: #000;
+
+$bg-default: (
+  background-color: $default !important,
+  color: #fff
+);
+
+$bg-dark: (
+  background-color: $dark !important,
+  color: #fff
+);
+
+$bg-grey: (
+  background-color: $grey !important,
+  color: #fff
+);
+
+$bg-dark-grey: (
+  background-color: $dark-grey !important,
+  color: #fff
+);
+$bg-light-grey: (
+  background-color: $light-grey !important,
+  color: #fff
+);
+$bg-black: (
+  background-color: $black !important,
+  color: #fff
+);
+
+$pf-font-path: "assets/fonts";

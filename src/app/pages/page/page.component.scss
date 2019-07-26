@@ -1,0 +1,13 @@
+.page-container {
+  overflow-y: hidden;
+  perspective: 1px;
+  // height: 100vh;
+  overflow-x: hidden;
+  perspective: 1px;
+}
+section {
+  background-color: #fff;
+}
+agm-map {
+  height: 300px;
+}

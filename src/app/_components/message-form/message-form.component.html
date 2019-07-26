@@ -1,0 +1,88 @@
+<div id="custom_height">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div
+          class="form__container floating no-padding animate fadeIn one-point-five-seconds"
+          style="position: relative;"
+        >
+          <h4 class="" *ngIf="!layout">Let's get your business growing today.</h4>
+          <p class="" *ngIf="!layout">Enquire now and book an appointment.</p>
+          <div class="form__input">
+            <form
+              class="example-form"
+              [formGroup]="contactForm"
+              (ngSubmit)="onSubmit()"
+              #contactFormDirective="ngForm"
+            >
+            <div class="row">
+            <div [ngClass]="{'col-12': !layout, 'col-md-4': layout === 'landscape'}">
+              <mat-form-field class="full-width">
+                <label for="">NAME</label>
+                <input matInput formControlName="name" />
+                <mat-error *ngIf="f.name.errors?.required"
+                  >Name is required.</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div [ngClass]="{'col-12': !layout, 'col-md-4': layout === 'landscape'}">
+              <mat-form-field class="full-width">
+                <label for="">EMAIL ADDRESS</label>
+                <input matInput formControlName="email" />
+                <mat-error *ngIf="f.email.errors?.required"
+                  >Email address is required.</mat-error
+                >
+                <mat-error *ngIf="f.email.errors?.email"
+                  >Email is not valid.</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div [ngClass]="{'col-12': !layout, 'col-md-4': layout === 'landscape'}">
+              <mat-form-field class="full-width">
+                <label for="">PHONE NUMBER</label>
+                <input matInput formControlName="phone_number" />
+                <mat-error *ngIf="f.phone_number.errors?.required"
+                  >Phone number is required.</mat-error
+                >
+                <mat-error *ngIf="f.phone_number.errors?.pattern"
+                  >Number only.</mat-error
+                >
+                <mat-error
+                  *ngIf="
+                    !f.phone_number.errors?.pattern &&
+                    f.phone_number.errors?.maxlength
+                  "
+                  >Phone number must be 12 characters long.</mat-error
+                >
+              </mat-form-field>
+            </div>
+            <div class="col">
+              <mat-form-field class="full-width">
+                <label for="">MESSAGE</label>
+                <br />
+                <textarea
+                  id="textarea"
+                  matInput
+                  formControlName="message"
+                ></textarea>
+                <mat-error *ngIf="f.message.errors?.required"
+                  >Message is required.</mat-error
+                >
+              </mat-form-field>
+              <button
+                [disabled]="loading || !contactForm.valid"
+                mat-raised-button
+                color="primary"
+                class="full-width bg-darker my-4"
+              >
+                SEND
+              </button>
+            </div>
+            </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

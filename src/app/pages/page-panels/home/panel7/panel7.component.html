@@ -1,0 +1,19 @@
+
+<div *ngIf="content != null" >
+<div class="image-description row">
+  <div class="image col-md-5 col-sm-12">
+    <img *ngIf="content.content.panel_7.image" [src]="content.content.panel_7.image" alt="" data-aos="fade-right" data-aos-duration="1000">
+  </div>
+  <div class="content col-md-7 col-sm-12 justify-content-center">
+    <p *ngIf="content.content.panel_7.description" [innerHTML]="content.content.panel_7.description" data-aos="fade-left" data-aos-duration="1000"></p>
+    
+    <ul *ngIf="content.content.list !== null" class="custom-list-icons animate fadeInUp two-seconds" data-aos="fade-left" data-aos-duration="1000">
+      <li *ngFor="let list of content.content.list">
+        <div *ngIf="list !== null">
+          <mat-icon>keyboard_arrow_right</mat-icon> {{list.text}}
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</div>

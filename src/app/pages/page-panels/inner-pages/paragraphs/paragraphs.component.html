@@ -1,0 +1,8 @@
+<div *ngIf="content != null" >
+<div class="row" *ngIf="content.content">
+  <div class="col-md-12 align-self-center justify-content-center">
+    <h1 class="animate fadeInUp point-five-second" [innerHTML]="content.content.texts.main_title"></h1>
+    <p class="animate fadeInUp point-five-second" [innerHTML]="content.content.texts.description"></p>
+  </div>
+</div>
+</div>

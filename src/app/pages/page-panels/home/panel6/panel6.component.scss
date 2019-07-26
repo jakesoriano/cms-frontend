@@ -1,0 +1,66 @@
+@import '../../../../../assets/variables.scss';
+
+.step-tabs {
+    .mat-tab-body-wrapper {
+      background: #fff;
+  
+      .step__content {
+        display: flex;
+        flex-flow: row;
+        padding: 50px;
+  
+        @media(max-width: 414px) {
+          display: block;
+          padding: 15px;
+        }
+  
+        .icon {
+          img {
+            width: auto;
+            margin: auto;
+            display: block;
+  
+            @media(max-width: 991px) {
+              width: 100%;
+            }
+          }
+        }
+  
+        .content {
+          .heading__first {
+            position: relative;
+            color: $dark;
+            margin-bottom: 15px;
+  
+            &:after {
+              content: ' ';
+              position: absolute;
+              background-color: $dark;
+              height: 2px;
+              width: 50px;
+              bottom: -12px;
+              left: 0;
+            }
+          }
+  
+          .heading__second {
+            color: $default;
+            margin: 15px 0;
+          }
+        }
+      }
+    }
+  
+    .mat-tab-label {
+      flex-grow: 1;
+      color: #fff;
+      font-size: 25px;
+      padding: 15px;
+      margin: 5px 0;
+    }
+  
+    .mat-ink-bar {
+      height: 5px;
+      background-color: $dark !important;
+    }
+  }

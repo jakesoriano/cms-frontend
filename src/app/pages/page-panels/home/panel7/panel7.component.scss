@@ -1,0 +1,19 @@
+.image-description {
+    .image {
+      img {
+        width: 100%;
+      }
+    }
+    .custom-list-icons {
+        list-style: none;
+        padding: 0;
+      
+        li {
+          .mat-icon {
+            position: relative;
+            top: 7px;
+            color: #12ade6;
+          }
+        }
+      }
+  }

@@ -1,0 +1,28 @@
+<div *ngIf="content != null" >
+
+<div class="custom-container">
+  <div class="d-none d-lg-block">
+    <div class="row" *ngIf="content.content.images !== null">
+      <div *ngFor="let image of content.content.images" class="col-lg-4 image_content content-center animate fadeInUp one-seconds" >
+        <img [src]="image.image" alt="" height="auto" width="100%" data-aos="fade-up" data-aos-duration="600">
+        <h5 class="blue-title" data-aos="fade-up"  data-aos-duration="800">{{image.heading}}</h5>
+        <p data-aos="fade-up"  data-aos-duration="1000">{{image.description}}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="logo-carousel" class="d-block d-lg-none" id="mobileview_package">
+    <carousel>
+      <slide *ngFor="let image of content.content.images">
+        <div class="d-flex">
+          <div class="col-md-12 content-center">
+            <img *ngIf="image.image !== null && image.image !== ''" [src]="image.image" alt="" height="auto" width="180px" data-aos="fade-up" data-aos-duration="600">
+            <h5 *ngIf="image.heading !== null && image.heading !== ''" class="blue-title" data-aos="fade-up"  ddata-aos-duration="800">{{image.heading}}</h5>
+            <p *ngIf="image.description !== null && image.description !== ''"data-aos="fade-up"  ddata-aos-duration="1000" >{{image.description}}</p>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>
+</div>

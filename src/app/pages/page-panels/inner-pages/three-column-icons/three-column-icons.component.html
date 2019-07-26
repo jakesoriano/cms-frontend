@@ -1,0 +1,25 @@
+<div *ngIf="content != null" >
+  <div class="d-none d-lg-block">
+    <div class="row" *ngIf="content.content.icons ">
+      <div *ngFor="let icon of content.content.icons" class="col-lg-4 icon_content content-center animate fadeInUp one-seconds">
+        <img [src]="icon.image" alt="" height="auto" width="120px" data-aos="fade-up" data-aos-duration="1000">
+        <h5 class="blue-title" data-aos="fade-up" data-aos-duration="1000">{{icon.heading}}</h5>
+        <p data-aos="fade-up" data-aos-duration="1000">{{icon.description}}</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="logo-carousel" class="d-block d-lg-none" id="mobileview_package">
+    <carousel>
+      <slide *ngFor="let icon of content.content.icons">
+        <div class="d-flex">
+          <div class="col-md-12 content-center">
+            <img *ngIf="icon.image !== null && icon.image !== ''" [src]="icon.image" alt="" height="auto" width="180px">
+            <h5 *ngIf="icon.heading !== null && icon.heading !== ''" class="blue-title">{{icon.heading}}</h5>
+            <h5 *ngIf="icon.description !== null && icon.description !== ''" class="blue-title">{{icon.description}}</h5>
+          </div>
+        </div>
+      </slide>
+    </carousel>
+  </div>
+</div>

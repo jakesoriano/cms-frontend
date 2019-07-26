@@ -1,0 +1,62 @@
+<div *ngIf="content != null">
+  <div class="row">
+    <div class="col-md-6">
+      <app-message-form class="d-block my-5"></app-message-form>
+    </div>
+    <div class="col-md-6 two-column-list">
+      <div style="height: 65px;"></div>
+      <div class="col-md-12">
+        <div *ngIf="content.content !== null">
+          <h5
+            class="animate fadeIn one-point-five-seconds"
+            [innerHTML]="content.content.title"
+            style="padding-bottom:10px;"
+          >
+            {{ content.content.title }}
+          </h5>
+        </div>
+        <div>
+          <a
+            *ngFor="let email of content.content.emails"
+            [href]="email.email_link"
+            [ngClass]="email.class"
+            data-aos="fade-in"
+            data-aos-duration="600"
+            >{{ email.email_text }}</a
+          >
+        </div>
+      </div>
+      <div class="col-md-12">
+        <ul
+          id="contact_us_icons"
+          *ngIf="content.content.list !== null"
+          class="custom-list animate fadeInUp one-point-five-seconds"
+        >
+          <li *ngFor="let list of content.content.list">
+            <div *ngIf="list !== null">
+              <p>
+                <a [href]="list.icon_link"
+                  ><img
+                    *ngIf="list.icon !== null && list.icon !== ''"
+                    [src]="list.icon"
+                    alt=""
+                    height="auto"
+                    width="50px"
+                  />
+                </a>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12619.604975752904!2d144.96602400000003!3d-37.745461!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc10a0306027a7ab3!2sNOAC+Consultants!5e0!3m2!1sen!2sus!4v1561702924013!5m2!1sen!2sus"
+        width="100%"
+        height="450"
+        frameborder="0"
+        style="border:0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>

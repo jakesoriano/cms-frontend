@@ -1,0 +1,304 @@
+<app-pre-loader></app-pre-loader>
+
+<nav class="navbarr">
+  <div class="d-flex flex-column full-width">
+    <div class="navbar__menu hidden-xs">
+      <div class="container">
+        <div class="menu__items align-items-center d-flex flex-row justify-content-between">
+          <a routerLink="/"
+            ><button mat-button >
+              <img src="/assets/img/noac-logo.png" alt="" width="80%" />
+            </button>
+          </a>
+          <a routerLinkActive="active" routerLink="/" routerLinkActive=""
+            ><button class="menu__item" mat-button>HOME</button></a
+          >
+          <a routerLinkActive="active" routerLink="/about-us" routerLinkActive="active"
+            ><button class="menu__item" mat-button>ABOUT US</button></a
+          >
+          <a [matMenuTriggerFor]="menu">
+            <button class="menu__item" mat-button>
+              SERVICES
+              <i class="material-icons">
+                expand_more
+              </i>
+            </button></a
+          >
+          <mat-menu #menu="matMenu">
+            <ul id="dropdownservices">
+              <li>
+                <a routerLink="/accounting" href="" routerLinkActive="active" class="menu__item">
+                  ACCOUNTING</a
+                >
+              </li>
+              <li>
+                <a routerLink="/taxation" href="" routerLinkActive="active" class="menu__item">
+                  TAXATION</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="/business-advisory"
+                  href=""
+                  routerLinkActive="active"
+                  class="menu__item"
+                >
+                  BUSINESS ADVISORY</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="/company-set-up"
+                  href=""
+                  routerLinkActive="active"
+                  class="menu__item"
+                >
+                  COMPANY SET-UP</a
+                >
+              </li>
+              <li>
+                <a
+                  routerLink="/company-reinstatement"
+                  href=""
+                  routerLinkActive="active"
+                  class="menu__item"
+                >
+                  COMPANY REINSTATEMENT
+                </a>
+              </li>
+              <li>
+                <a
+                  routerLink="/company-secretarial"
+                  href=""
+                  routerLinkActive="active"
+                  class="menu__item"
+                >
+                  COMPANY SECRETARIAL
+                </a>
+              </li>
+            </ul>
+          </mat-menu>
+          <a routerLink="/contact-us" href="" routerLinkActive="active">
+            <button class="menu__item" mat-button routerLinkActive="active">
+              CONTACT US
+            </button></a
+          >
+          <a id="client-button" href="{{ dashboardEndpoint }}" target="blank"
+            ><button mat-button>CLIENT LOGIN</button></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+<!-- Mobile View Menu -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar__menu mobile-menu">
+  <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" [ngClass]="{ show: navbarOpen }">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <button mat-button routerLink="/">
+          <img src="/assets/img/noac-logo.png" alt="" width="80%" />
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="menu__item" mat-button routerLink="/" routerLinkActive="active">
+          HOME
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="menu__item" mat-button routerLink="/about-us" routerLinkActive="active">
+          ABOUT US
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="menu__item" mat-button routerLink="/accounting" routerLinkActive="active">
+          ACCOUNTING
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="menu__item" mat-button routerLink="/taxation" routerLinkActive="active">
+          TAXATION
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="menu__item"
+          mat-button
+          routerLink="/business-advisory"
+          routerLinkActive="active"
+        >
+          BUSINESS ADVISORY
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="menu__item"
+          mat-button
+          routerLink="/company-set-up"
+          routerLinkActive="active"
+        >
+          COMPANY SET-UP
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="menu__item"
+          mat-button
+          routerLink="/company-reinstatement"
+          routerLinkActive="active"
+        >
+          COMPANY REINSTATEMENT
+        </button>
+      </li>
+
+      <li class="nav-item">
+        <button
+          class="menu__item"
+          mat-button
+          routerLink="/company-secretarial"
+          routerLinkActive="active"
+        >
+          COMPANY SECRETARIAL
+        </button>
+      </li>
+
+      <li class="nav-item">
+        <button class="menu__item" mat-button routerLink="/contact-us" routerLinkActive="active">
+          CONTACT US
+        </button>
+      </li>
+      <li class="nav-item">
+        <a id="client-button" href="{{ dashboardEndpoint }}" target="blank"
+          ><button mat-button>CLIENT LOGIN</button></a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>
+<!-- Mobile View Menu -->
+<router-outlet></router-outlet>
+<footer>
+  <div class="footer__widgets">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 content-center" id="noac-footer-logo">
+          <button mat-button routerLink="/">
+            <img src="/assets/img/noac-logo-footer.png" alt="" width="100%;" />
+          </button>
+        </div>
+        <!-- <div class="col-lg-1 d-md-none d-lg-block"></div> -->
+        <div class="col-md-3 col-xs-4">
+          <ul>
+            <li>
+              <a class="menu__item" mat-button routerLink="/" routerLinkActive="active">HOME</a>
+            </li>
+            <li>
+              <a class="menu__item" mat-button routerLink="/about-us" routerLinkActive="active"
+                >ABOUT US</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" mat-button routerLink="/contact-us" routerLinkActive="active"
+                >CONTACT US</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-xs-4">
+          <ul>
+            <li>
+              <a class="menu__item" mat-button routerLink="/accounting" routerLinkActive="active"
+                >ACCOUNTING</a
+              >
+            </li>
+            <li>
+              <a class="menu__item" mat-button routerLink="/taxation" routerLinkActive="active"
+                >TAXATION</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu__item"
+                mat-button
+                routerLink="/business-advisory"
+                mat-button
+                routerLinkActive="active"
+              >
+                BUSINESS ADVISORY</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3 col-xs-4">
+          <ul>
+            <li>
+              <a
+                class="menu__item"
+                mat-button
+                routerLink="/company-set-up"
+                routerLinkActive="active"
+                >COMPANY SET-UP</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu__item"
+                mat-button
+                routerLink="/company-reinstatement"
+                routerLinkActive="active"
+                >COMPANY REINSTATEMENT</a
+              >
+            </li>
+            <li>
+              <a
+                class="menu__item"
+                mat-button
+                routerLink="/company-secretarial"
+                routerLinkActive="active"
+                >COMPANY SECRETARIAL</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="country-container">
+    <div class="container">
+      <div class="row" id="service_country">
+        <div class="col-md-3 col-sm-6">
+          <p href="">HONG KONG</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <p href="">AUSTRALIA</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <p href="">UNITED KINGDOM</p>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <p href="">UNITED STATES</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer__copyrights">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-xs-4">
+          &copy; 2019 NOAC Consultants. All Rights Reserved
+        </div>
+        <div class="col-md-4 col-xs-4 content-center">
+          <a href="/" target="_blank">Terms & Conditions</a> |
+          <a href="/" target="_blank">Privacy Policy</a>
+        </div>
+        <div class="col-md-4 col-xs-4 content-right">
+          Designed &amp; Developed by
+          <a href="https://www.globalwebforce.com/?ref=noac" target="_blank">Global WebForce</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,19 @@
+<div *ngIf="content != null" >
+
+  <div class="container">
+    <div class="row" *ngIf="content.content.signuppanels ">
+      <div
+        *ngFor="let signuppanel of content.content.signuppanels"
+        class="col-lg-12 icon_content content-center animate fadeInUp one-seconds"
+      >
+        <p>{{ signuppanel.description }}</p>
+        <div class="form__container">
+          <div class="form__input">
+            <!-- <app-sign-up-form2 layout="landscape"></app-sign-up-form2> -->
+            <app-message-form layout="landscape"></app-message-form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

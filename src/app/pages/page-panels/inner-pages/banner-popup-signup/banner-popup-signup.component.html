@@ -1,0 +1,24 @@
+<div *ngIf="content != null" >
+<div class="banner-content" *ngIf="content.content">
+  <div class="row justify-content-between home-banner-content">
+    <div class="col-md-6 align-self-center justify-content-center">
+      <h2 class="animate fadeInUp point-five-second" [innerHTML]="content.content.banner_content.main_title"  data-aos="fade-right">  </h2>
+      <p class="animate fadeInUp point-five-second" [innerHTML]="content.content.banner_content.description"  data-aos="fade-right">
+      </p>
+      <h3 class="animate fadeInUp point-five-second">
+        <span [innerHTML]="content.content.banner_content.member_text"></span> <img [src]="content.content.banner_content.member_img" alt="">
+      </h3>
+    </div>
+
+    <div class="col-md-3 home-banner-signup">
+      <div class="form__container animate fadeIn point-five-second"  data-aos="fade-up">
+        <h4 [innerHTML]="content.content.banner_content.form_title"></h4>
+        <p [innerHTML]="content.content.banner_content.form_description"></p>
+        <div class="form__input">
+          <!-- <app-sign-up-form layout="portrait"></app-sign-up-form> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

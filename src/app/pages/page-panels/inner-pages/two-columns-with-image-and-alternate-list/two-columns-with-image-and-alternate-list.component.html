@@ -1,0 +1,48 @@
+<div *ngIf="content != null" >
+
+<div class="image-with-two-alternn8-list row">
+  <div class="image col-md-5 col-sm-12">
+    <img
+      *ngIf="content.content.img_wth_altrn8_list.image"
+      [src]="content.content.img_wth_altrn8_list.image"
+      alt=""
+      data-aos="fade-right" data-aos-duration="1000"/>
+  </div>
+  <div class="content col-md-7 col-sm-12 justify-content-center">
+    <p
+      *ngIf="content.content.img_wth_altrn8_list.description1"
+      [innerHTML]="content.content.img_wth_altrn8_list.description1"
+      data-aos="fade-left" data-aos-duration="1000"></p>
+    <ul
+      *ngIf="content.content.list1 !== null"
+      class="custom-list-icons animate fadeInUp two-seconds"
+    >
+      <li *ngFor="let list1 of content.content.list1">
+        <div *ngIf="list1 !== null" class="list_icons">
+          <p data-aos="fade-left" data-aos-duration="1500"><mat-icon>keyboard_arrow_right</mat-icon><mat-icon>keyboard_arrow_right</mat-icon> {{ list1.text }}</p>
+        </div>
+      </li>
+    </ul>
+    <p
+      *ngIf="content.content.img_wth_altrn8_list.description2"
+      [innerHTML]="content.content.img_wth_altrn8_list.description2"
+      data-aos="fade-left" data-aos-duration="1600"
+    ></p>
+    <ul
+      *ngIf="content.content.list2 !== null"
+      class="custom-list-icons animate fadeInUp two-seconds"
+    >
+      <li *ngFor="let list2 of content.content.list2">
+        <div *ngIf="list2 !== null"  class="list_icons">
+            <p data-aos="fade-left" data-aos-duration="1700"><mat-icon>keyboard_arrow_right</mat-icon><mat-icon>keyboard_arrow_right</mat-icon> {{ list2.text }}</p>
+        </div>
+      </li>
+    </ul>
+    <p
+      *ngIf="content.content.img_wth_altrn8_list.description3"
+      [innerHTML]="content.content.img_wth_altrn8_list.description3"
+      data-aos="fade-left" data-aos-duration="1800"
+    ></p>
+  </div>
+</div>
+</div>

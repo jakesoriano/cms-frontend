@@ -1,0 +1,18 @@
+<div *ngIf="content != null" >
+<div class="panel2" *ngIf="content.content">
+  <div class="container">
+    {{content.title}}asd
+    <!-- Flex Logos -->
+    <div class="flex-logos" *ngIf="content && content.content.hasOwnProperty('logos')">
+        <div class="d-flex flex-md-row flex-column">
+          <div class="d-flex flex-grow-1 align-items-center justify-content-md-start justify-content-center">
+            <h2>{{content.content.test}}</h2>
+          </div>
+          <div class="d-flex flex-grow-1 flex-row justify-content-between">
+            <img class="icon" [src]="logo.imgSrc" alt="" *ngFor="let logo of content.content.logos">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+</div>

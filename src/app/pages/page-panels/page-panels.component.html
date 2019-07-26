@@ -1,0 +1,26 @@
+<div class="section__container" *ngFor="let panel of panels">
+  <section *ngIf="panel.hasOwnProperty('content')" [ngClass]="(panel.content.css_class !== null && panel.content.css_class !== '') ? panel.content.css_class : ''" [id]="(panel.content.css_id !== null && panel.content.css_id !== '') ? panel.content.css_id : ''"
+    [ngStyle]="{
+      'background-image': (panel.hasOwnProperty('content') && panel.content.hasOwnProperty('bg_image')) ? 'url(\''+panel.content.bg_image+'\')' : '',
+      'background-position': (panel.hasOwnProperty('content') && panel.content.hasOwnProperty('bg_image')) ? panel['content']['bg_position'] : '',
+      'background-size': (panel.hasOwnProperty('content') && panel.content.hasOwnProperty('bg_size')) ? panel['content']['bg_size'] : '',
+      'background-color': (panel.hasOwnProperty('content') && panel.content.hasOwnProperty('bg_color')) ? panel['content']['bg_color'] : ''
+      
+      }">
+      <div [ngClass]="(panel.content.full_width == 'Y') ? 'container-fluid' : 'container'">
+        <h2 *ngIf="panel.content.hasOwnProperty('title') && panel.content.title !== null && panel.content.title.text !== null" class="section__heading animate fadeIn one-seconds"
+            [ngStyle]="{
+              'text-align': panel.content.title.alignment,
+              'color': panel.content.title.color
+            }"  data-aos="fade" data-aos-duration="2000">{{panel.content.title.text}}</h2>
+        <p data-aos="fade" data-aos-duration="2500" *ngIf="panel.content.hasOwnProperty('sub_title') && panel.content.sub_title !== null && panel.content.sub_title.text !== null" class="section__description"
+            [ngStyle]="{
+              'text-align': panel.content.sub_title.alignment,
+              'color': panel.content.sub_title.color
+            }"
+            [innerHTML]="panel.content.sub_title.text"
+            ></p>
+        <app-page-panel-wrapper [panel]="panel"></app-page-panel-wrapper>
+      </div>
+  </section>
+</div>

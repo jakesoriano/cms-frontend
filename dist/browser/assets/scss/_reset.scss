@@ -1,0 +1,62 @@
+.organizationForm .mat-form-field-flex {
+  padding: 0 10px !important;
+  display: flex;
+  align-items: center;
+}
+.coupon-wrapper {
+  .mat-form-field-flex {
+    padding: 0 10px !important;
+    border: 1px solid black;
+    border-radius: 0 !important;
+  }
+  .mat-form-field-infix {
+    border: none !important;
+    padding: 10px;
+  }
+}
+
+.organizationForm .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+  transform: translateY(0%);
+}
+
+.mat-card {
+  &.card-package {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.mat-card {
+  &.package-selection-step {
+    &.card-package {
+      &.active,
+      &:hover {
+        box-shadow: 0 0 10px gray;
+        transform: scale(1.01);
+        transition: all 0.5s;
+      }
+    }
+  }
+}
+
+.mat-form-field-infix {
+  padding-bottom: 0 !important;
+}
+
+.mat-form-field-ripple {
+  background-color: #3b4779 !important;
+}
+
+.pre-loader-progress {
+  & .mat-progress-bar-background {
+    fill: #5d5e61;
+  }
+  & .mat-progress-bar-buffer {
+    background-color: #5d5e61;
+  }
+  & .mat-progress-bar-fill {
+    &::after {
+      background-color: #c1c2c6;
+    }
+  }
+}

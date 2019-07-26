@@ -1,0 +1,31 @@
+<div *ngIf="content != null" >
+<div class="three-column-list row">
+    <div class="content col-md-4 col-sm-4 justify-content-center">
+      <ul *ngIf="content.content.list1 !== null" class="custom-list animate fadeInUp one-point-five-seconds">
+        <li *ngFor="let list1 of content.content.list1">
+          <div *ngIf="list1 !== null">
+            <p><mat-icon>check</mat-icon> {{list1.text}}</p> 
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="content col-md-4 col-sm-4 justify-content-center">
+        <ul *ngIf="content.content.list2 !== null" class="custom-list animate fadeInUp two-seconds">
+          <li *ngFor="let list2 of content.content.list2">
+            <div *ngIf="list2 !== null">
+                <p><mat-icon>check</mat-icon> {{list2.text}}</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="content col-md-4 col-sm-4 justify-content-center">
+          <ul *ngIf="content.content.list3 !== null" class="custom-list animate fadeInUp two-point-five-seconds">
+            <li *ngFor="let list3 of content.content.list3">
+              <div *ngIf="list3 !== null">
+                  <p><mat-icon>check</mat-icon> {{list3.text}}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+  </div>
+</div>

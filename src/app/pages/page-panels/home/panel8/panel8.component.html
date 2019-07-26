@@ -1,0 +1,38 @@
+<div *ngIf="content != null" >
+
+<div class="d-flex flex-md-row flex-column">
+  <div class="col-md-6">
+    <!-- logo carousel component -->
+    <div class="logo-carousel">
+      <carousel>
+        <slide *ngFor="let logo of content.content.logos">
+          <div class="d-flex">
+            <div class="col-md-6">
+              <img class="icon" [src]="logo.logo1" alt="">
+            </div>
+            <div class="col-md-6">
+              <img class="icon" [src]="logo.logo2" alt="">
+            </div>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+  <div class="col-md-6 bg-default d-flex align-items-center justify-content-center">
+    <div class="quote-testimonial">
+      <carousel>
+        <slide>
+          <div class="row">
+            <div class="col-md-12 align-self-center justify-content-center">
+              <mat-icon>format_quote</mat-icon>
+              <p> {{content.content.testimonial.text}}
+              </p>
+              <p> - <strong>{{content.content.testimonial.title}} </strong></p>
+            </div>
+          </div>
+        </slide>
+      </carousel>
+    </div>
+  </div>
+</div>
+</div>

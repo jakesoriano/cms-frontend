@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../src/assets/variables.scss";
+
+@import '~bootstrap/dist/css/bootstrap-grid.min.css';
+@import '/assets/material-default.scss';
+@import '/assets/font.scss';
+@import '/assets/website.scss';
+
+@import "../src/assets/scss/reset";

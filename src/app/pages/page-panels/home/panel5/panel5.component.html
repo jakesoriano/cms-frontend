@@ -1,0 +1,11 @@
+<div *ngIf="content != null" >
+<div class="row"  *ngIf="content.content">
+  <div class="col-md-8 content">
+    <h4 class="color-white" data-aos="fade-in" data-aos-duration="600">{{content.content.cta_text}}</h4>
+    <div [innerHTML]="content.content.description" class="description" data-aos="fade-in" data-aos-duration="600"></div>
+  </div>
+  <div class="col-md-4 d-flex flex-column justify-content-between">
+    <a *ngFor="let button of content.content.buttons" [href]="button.button_link" mat-raised-button color="primary" [ngClass]="button.class" data-aos="fade-in" data-aos-duration="600">{{button.button_text}}</a>
+  </div>
+</div>
+</div>

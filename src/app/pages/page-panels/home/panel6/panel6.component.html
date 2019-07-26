@@ -1,0 +1,24 @@
+
+<!-- steps tabs icon component -->
+<div *ngIf="content != null" >
+<div class="step-tabs" *ngIf="content.content">
+  <mat-tab-group>
+    <mat-tab [label]="step.tab_label" *ngFor="let step of content.content.steps">
+      <div class="row">
+        <div class="step__content">
+          <div class="col-lg-4 col-xs-12 icon">
+            <img [src]="step.image" alt="">
+          </div>
+          <div class="content col-xs-12 col-lg-8">
+            <h5 class="heading__first">{{step.title_first}}</h5>
+            <h3 class="heading__second">{{step.title_second}}</h3>
+            <p>
+              {{step.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+</div>

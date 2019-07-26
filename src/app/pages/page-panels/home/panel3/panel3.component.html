@@ -1,0 +1,42 @@
+<div *ngIf="content != null" >
+<div class="services"  *ngIf="content.content">
+  <div class="content-lg">
+    <div class="row">
+      <div class="col-md-6" *ngFor="let service of content.content.services">
+        <!-- Featured Card Component -->
+        <mat-card class="featured-card mat-elevation-z bg-none animate fadeInLeft one-seconds">
+          <div class="image-container" >
+              <a [href]="service.link"><img mat-card-image [src]="service.image"></a>
+          </div>
+          <mat-card-content>
+            <h5 class="blue-title">{{service.title}}</h5>
+            <p>
+              {{service.description}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  <div class="content-sm-xs">
+    <mat-tab-group mat-stretch-tabs>
+      <mat-tab label="Accounting" *ngFor="let service of content.content.services">
+        <div class="col-md-6">
+          <!-- Featured Card Component -->
+          <mat-card class="featured-card mat-elevation-z bg-none animate fadeInLeft four-seconds">
+            <div class="image-container" >
+              <a [href]="service.link"><img mat-card-image [src]="service.image"></a>
+            </div>
+            <mat-card-content>
+              <h5 class="blue-title">{{service.title}}</h5>
+              <p>
+                {{service.description}}
+              </p>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+</div>
+</div>
