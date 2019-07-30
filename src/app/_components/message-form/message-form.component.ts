@@ -15,7 +15,7 @@ export class MessageFormComponent implements OnInit {
   loading = false;
   submitted = false;
 
-  @ViewChild("contactFormDirective") private contactFormDirective: NgForm
+  @ViewChild("contactFormDirective", {static: false}) private contactFormDirective: NgForm
   @Input() layout: string;
 
   constructor(

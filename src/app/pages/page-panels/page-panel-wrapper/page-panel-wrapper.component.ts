@@ -6,7 +6,7 @@ import { NgModule, OnInit, Component, Compiler, ViewContainerRef, ViewChild, Inp
   styleUrls: ['./page-panel-wrapper.component.scss']
 })
 export class PagePanelWrapperComponent implements OnInit {
-  @ViewChild('panelWrapper', { read: ViewContainerRef }) panelWrapper;
+  @ViewChild('panelWrapper', { read: ViewContainerRef, static: false }) panelWrapper;
   @Input() panel;
   cmpRef: ComponentRef<any>;
   private isViewInitialized: boolean = false;
